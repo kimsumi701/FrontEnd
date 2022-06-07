@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 태그</title>
+</head>
+<body>
+    <h1>입력 태그 input</h1>
+    <p>input 태그는 type 속성에 따라 다양한 폼을 생성합니다.</p>
+    <p>placeholder라는 속성에 값을 입력하면 input 박스안에 입력내용에 대한 힌트가 나타납니다</p>
+    <br>
+    <ol>
+        <li>
+            <h3>text</h3>
+            <p><input type="text" placeholder="힌트"></p>
+            <!-- 글자를 입력하는 경우에 사용  -->        
+        </li>
+        <li>
+            <h3>password</h3>
+            <p><input type="password"></p>
+        </li>
+        <li>
+            <h2>Search</h2>
+            <p><input type="search" placeholder="검색어"></p>
+        </li>
+        <li>
+            <h2>email</h2>
+            <p><input type="email" placeholder="이메일"></p>
+        </li>
+        <li>
+            <h2>tel</h2>
+            <p><input type="tel" placeholder="전화번호"></p>
+        </li>
+        <li>
+            <h2>color</h2>
+            <p><input type="color"></p>
+        </li>
+        <li>
+            <h2>number</h2>
+            <p><input type="number" min="10" max="20" value="12"></p>
+            <!--숫자 입력 박스-->
+        </li>
+        <li>
+            <h2>range</h2>
+            <p><input type="range" value="10"></p>
+            <!--수치 범위 조절 막대-->
+        </li>
+    </ol>
+    <br>
+    <ol>
+        <li>
+            <h2>checkbox</h2>
+            <div>
+                매우 그렇다<input type="checkbox" value="매우 그렇다" name="YoN">
+                그렇다<input type="checkbox" value="그렇다" name="YoN">
+                보통<input type="checkbox" value="보통" name="YoN">
+                그렇지 않다<input type="checkbox" value="그렇지 않다" name="YoN">
+                매우 그렇지 않다<input type="checkbox" value="매우 그렇지 않다" name="YoN">
+            </div>
+        </li>
+        <li>
+            <h2>radio</h2>
+            <div>
+                매우 그렇다<input type="radio" value="매우 그렇다" name="YN">
+                그렇다<input type="radio" value="그렇다" name="YN">
+                보통<input type="radio" value="보통" name="YN">
+                그렇지 않다<input type="radio" value="그렇지 않다" name="YN">
+                매우 그렇지 않다<input type="radio" value="매우 그렇지 않다" name="YN">
+            </div>
+        </li>
+        <li>
+            <h2>checkbox와 radio의 특징</h2>
+            <div>
+                <p>checkbox는 다중 선택이 가능하다</p>
+                <p>radio는 다중 선택이 불가능하다</p>
+                <p>name 값에는 카테고리가 입력된다. 한가지 질문에서의 카테고리는 같이 사용될 수 있으나, 질문이 다른 경우 동일한 카테고리를 사용하면 안된다</p>
+                <p>name 값은 한글 불가능, 대소문자 구분함</p>
+                <p>checked라는 속성을 넣으면 체크된 상태로 보여진다.</p>
+            </div>
+        </li>
+    </ol>
+    <br>
+    <ol>
+        <li>
+            <h2>submit</h2> 
+            <p><input type="submit" value="누르는 버튼"></p>
+            <!--전송버튼, 마지막에 제출 같은 것을 할 떄 사용되는 버튼-->
+            <!--value 속성값에 버튼에 표시될 텍스트를 입력하면 된다.-->
+        </li>
+        <li>
+            <h2>button</h2>
+            <p><input type="button" value="p태그 안에 input 태그의 type 버튼"></p>
+            <button>button 단독 태그</button>
+            <!--통상적으로 input button 태그 보다는 button 단독 태그를 더 자주 사용-->
+        </li>
+        <li>
+            <h2>reset</h2>
+            <p><input type="reset" value="리셋 버튼"></p>
+            <!--form 태그 안에서 사용 가능-->
+            <!--전부 리셋시킨다.-->
+        </li>
+        <li>
+            <h2>file</h2>
+            <p><input type="file"></p>
+            <!--파일 선택-->
+        </li>
+        <li>
+            <h2>date</h2>
+            <p><input type="date"></p>
+            <!--날짜 선택-->
+        </li>
+    </ol>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h2>form</h2>
+        <p>form 태그는 입력양식을 만들기 위한 태그, 입력양식에 사용되는 태그들은 모두 form 태그 안에 작성을 해주면 된다.</p>
+        <form >
+            아이디 <input type="text" placeholder="아이디"> <br>
+            비밀번호 <input type="password" placeholder="비밀번호"> <br>
+            <input type="submit" value="로그인">        
+        </form>
+        <!--줄바꿈이 일어나려면 다른 블락태그 안에 포함시켜서 사용하던가, br 태그를 사용해서 줄바꿈을 만들어 주어야 한다.-->
+    </div>
+    <div>
+        <h2>label</h2>
+        <p>label : label은 속성이 아니라 태그, 입력태그들에 대한 제목을 정의하는 태그</p>
+        <p>requried : 항목에 내용이 비었을 경우에 경고 메세지를 표시하는 속성</p>
+        <form>
+            <label for="aa">아이디</label>
+            <input type="text" id="aa" required><br>
+            <label for="bb">비밀번호</label>
+            <input type="password" id="bb" required><br>
+            <input type="submit" value="로그인"> 
+        </form>
+    </div>
+    <div>
+        <h2>textarea</h2>
+        <p>textarea 태그는 여러줄의 글을 입력할 수 있는 텍스트 상자입니다. 인라인 요소</p>
+        <textarea cols="300" rows="10"></textarea>
+        <!--cols 가로 rows 세로-->
+    </div>
+</body>
+</html>

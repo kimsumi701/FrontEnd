@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trasnform 예제</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: lightgrey
+        }
+        .day {
+            font-size: 120px;
+            font-weight: 700;      
+            transform: translate(80px);
+        }
+        .month {
+            font-size: 80px;
+            transform: translate(80px);
+        }
+        .year {
+            font-size: 20px;            
+            transform: translate(140px, 120px) rotate(90deg);
+        }
+        .week {
+            font-size: 50px;
+            transform: translate(-120px, -180px) rotate(-90deg);
+        }
+        p {
+            margin:0;            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="day">06</p>
+        <p class="month">FEB</p>
+        <p class="year">2013</p>
+        <p class="week">WEDNESDAY</p>
+    </div>
+</body>
+</html>

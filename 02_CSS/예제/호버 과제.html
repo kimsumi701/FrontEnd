@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호버 과제</title>
+    <style>
+        .box {            
+            width: 1200px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 0;            
+            background-color: aqua;
+        }
+        ul {
+            position: relative;
+            float: left;
+            width: 200px;
+            height: 100%;
+            margin: 0;
+            padding: 0;            
+            list-style: none;
+            transition-property: all;
+            transition-duration: 1.5s;                  
+        }
+        ul::after {
+            content: "";
+            display: block;
+            clear: both;
+        }       
+        /* 배경색 */
+        ul:nth-child(1) {
+            background-color: chocolate;
+        }
+        ul:nth-child(2) {
+            background-color: orange;
+        }
+        ul:nth-child(3) {
+            background-color: dodgerblue;
+        }
+        ul:nth-child(4) {
+            background-color: rgb(26, 106, 185);
+        }
+        ul:nth-child(5) {
+            background-color: rgb(63, 79, 95);
+        }
+        ul:nth-child(6) {
+            background-color: rgb(44, 58, 71);
+        }    
+        /* 이미지 배경 */
+        .back {
+            position: absolute;
+            top: 50px;
+            left: 65px;      
+            width: 70px;
+            height: 70px;            
+            border-radius: 50%;            
+            opacity: 1;
+        }
+        /* 이미지 */
+        .img {      
+            position: absolute;
+            top: 65px;
+            left: 80px;      
+            width: 40px;
+            height: 40px;          
+            opacity: 1;
+            background-size: cover;                       
+        }
+        /* 글자 */
+        .title {
+            transform: translate(0, 150px);
+            color: azure;
+            text-align: center;
+        }
+        /* hover */         
+        ul:hover {
+            height: 300px;                        
+            transition-timing-function: ease;
+        }           
+        .box:hover > ul:not(ul:hover) > .back {
+            opacity: 0.3;
+        }     
+        .box:hover > ul:not(ul:hover) > .img {
+            opacity: 0.3;
+        }                      
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="u1">
+            <li class="back" style="background-color: rgba(235, 127, 50, 0.5);"></li>
+            <li class="img" style="background-image: url(./호버/hover_1.png);"></li>
+            <li class="title">New</li>
+        </ul>
+        <ul class="u2">
+            <li class="back" style="background-color: rgb(253, 178, 39);"></li>
+            <li class="img" style="background-image: url(./호버/hover_2.png);"></li>
+            <li class="title">camera</li>
+        </ul>
+        <ul class="u3">
+            <li class="back" style="background-color: rgb(56, 155, 255);"></li>
+            <li class="img" style="background-image: url(./호버/hover_3.png);"></li>
+            <li class="title">Heart</li>
+        </ul>
+        <ul class="u4">
+            <li class="back" style="background-color: rgb(42, 115, 187);"></li>
+            <li class="img" style="background-image: url(./호버/hover_4.png);"></li>
+            <li class="title">Setting</li>
+        </ul>
+        <ul class="u5">
+            <li class="back" style="background-color: rgb(75, 87, 99);"></li>
+            <li class="img" style="background-image: url(./호버/hover_5.png);"></li>
+            <li class="title">Share</li>
+        </ul>
+        <ul class="u6">
+            <li class="back" style="background-color: rgb(62, 71, 80);"></li>
+            <li class="img" style="background-image: url(./호버/hover_6.png);"></li>
+            <li class="title">Download</li>
+        </ul>
+    </div>
+</body>
+</html>
