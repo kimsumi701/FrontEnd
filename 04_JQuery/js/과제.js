@@ -29,6 +29,7 @@ meetAt(1234, 5, 31);
 // 5
 function findSmallestElement(j) {
     let Small = 0;
+    if (j == null) { return 0; }
     if (j.length == 0) {
         return 0;
     }
@@ -40,6 +41,6 @@ function findSmallestElement(j) {
     return Small;
 }
 // console.log(findSmallestElement([100, 200, 3, 0, 2, 1]));
-console.log(findSmallestElement([]));
+console.log(findSmallestElement());
 // 6
 
