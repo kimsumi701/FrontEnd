@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어 클론코딩 레이아웃 연습</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style_연습.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- 배너 -->
+        <section id="topBn">
+            <div class="topBnList">
+                <!-- 
+                    figure : 독립적인 콘텐츠를 표현
+                    주 문서 플로우가 참조하지만, 다른 부분이나 부록으로 이동해도 문제 없는 이미지, 삽화, 도표, 코드 조각 등을 맡습니다.
+                    <figcaption>을 넣어서 설명을 덧붙일 수 있습니다.
+                 -->
+                <figure>
+                    <img src="./img/topbn_01.jpg" alt="topbn1">
+                    <figcaption>마일리지, 여행상품권 유효기간 연장</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/topbn_02.jpg" alt="topbn2">
+                    <figcaption>2022 설 연휴 국내여행 얼리버드 특가</figcaption>
+                </figure>
+                <p class="topBnClose"><a href="#">상단배너 닫기</a></p>
+            </div>
+        </section>
+        <header id="header">
+            <div class="h_in">
+                <div class="h_utill">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                <div class="h_ls">
+                    <h1 class="logo"><a href="#">하나투어</a></h1>
+                    <div class="h_search">
+                         <form action="">
+                            <!-- fieldset
+                                웹 양식의 여러 컨트롤과 레이블(<label>)을 묶을 때 사용
+                                <fieldset> 요소는 HTML 양식 속에서 그룹을 만들 수 있으며 
+                                <legend> 요소로 그룹의 설명을 제공할 수 있습니다. 
+                                여러 특성을 지정할 수 있는데, 
+                                그 중 중요한 것 하나는 페이지 내 <form> 요소의 
+                                id를 받을 수 있는 form 특성으로, 
+                                <form> 바깥의 <fieldset> 요소를 해당 양식에 포함해야 할 때 사용합니다. 다른 하나는 disabled로, <fieldset>의 모든 콘텐츠를 한 번에 비활성화할 수 있습니다.
+                            -->
+                            <fieldset>
+                                <legend class="hide">통합검색영역</legend>
+                                <input type="text" placeholder="검색어를 입력해 주세요">
+                                <button>검색하기</button>
+                            </fieldset>
+                         </form>
+                    </div>
+                    <div class="h_keyword">
+                        <div class="h_keyword_slide">
+                            <div class="hks_box">
+                                <span class="hks_hot">HOT</span>
+                                <span class="hks_local">부산</span>
+                            </div>
+                        </div>
+                        <div class="h_keyword_list">
+                            <div class="h_keyword_list_box">
+                                <p><span>HOT</span> 인기검색어</p>
+                                <ul>
+                                    <li><a href="#">제주도</a></li>
+                                    <li><a href="#">무착륙</a></li>
+                                    <li><a href="#">사이판</a></li>
+                                    <li><a href="#">울릉도</a></li>
+                                    <li><a href="#">괌</a></li>
+                                    <li><a href="#">부산</a></li>
+                                    <li><a href="#">하와이</a></li>
+                                    <li><a href="#">롯데월드</a></li>
+                                    <li><a href="#">터키</a></li>
+                                    <li><a href="#">하이원</a></li>
+                                </ul>
+                            </div>
+                        </div><!--.keyword_list-->
+                    </div><!--.h_keyword-->
+                </div><!--.h_ls-->
+            </div>
+            <div class="h_quick"></div>
+        </header>
+    </div>
+</body>
+</html>
