@@ -425,3 +425,155 @@
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
 }
+/* 본문1 */
+.main1 {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: #cfeffa;
+}
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+.main1 .inner {
+    display: flex;
+    justify-content: space-between;
+}
+.main_search {
+    width: 330px;
+    margin-top: 75px;
+}
+.main_search .ment {
+    font-size: 26px;
+    line-height: 1.3em;
+    color: #111;
+}
+.ms_tabs {
+    margin-top: 30px;
+}
+.ms_tabs_btn ul {
+    display: flex;
+}
+.ms_tabs_btn li {
+    width: 110px;
+    border-bottom: 1px solid #333;
+}
+.ms_tabs_btn li a {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    text-align: center;
+    font-size: 15px;
+    color: #111;
+    opacity: 0.6;
+}
+.ms_tabs_btn .on a{
+    border-bottom: 3px solid #333;
+    font-weight: 700;
+    opacity: 1;
+}
+/* pannel */
+.ms_tabs_pannel {
+    margin-top: 24px;
+}
+.ms_tabs_pannel legend {
+    display: none;
+}
+.tab_line2, .tab_line3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+.tab_line4 {
+    margin-top: 30px;
+}
+.ms_tabs_pannel input:focus {
+    outline: transparent;
+    border-color: #5e2bb8;
+}
+.tabs_input_txt_01 {
+    width: 298px;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 17px;
+}
+.tabs_input_txt_02,
+.tabs_input_txt_03 {
+    position: relative;
+}
+.tabs_input_txt_02 input,
+.tabs_input_txt_03 input {
+    width: 108px;
+    height: 41px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0 15px 0 36px;
+    background-color: #fff;
+    color: #333;
+}
+.tabs_input_txt_02 input::placeholder,
+.tabs_input_txt_03 input::placeholder {
+    color: #333
+}
+.tabs_input_txt_02::after,
+.tabs_input_txt_03::after {
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    content: '';
+    display: block;
+    width: 12px;
+    height: 14px;
+    background-image: url(../img/spr_icn.png);
+}
+.tabs_input_txt_02::after {
+    background-position: -136px 0;
+}
+.tabs_input_txt_03::after {
+    background-position: -155px 0;
+}
+.tabs_btn_01,
+.tabs_btn_02 {
+    position: relative;
+    opacity: 0.6;
+}
+.tabs_btn_01 button,
+.tabs_btn_02 button{
+    width: 161px;
+    height: 58px;
+    padding-left: 75px;
+    border: 1px solid #111;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 17px;
+    color: #111;
+}
+.tabs_btn_01::after,
+.tabs_btn_02::after {
+    position: absolute;
+    top: 18px;
+    left: 19px;
+    content: '';
+    display: block;
+    width: 40px;
+    height: 24px;
+    background-image: url(../img/spr_man.png);
+}
+.tabs_btn_01::after{
+    background-position: 0 -26px;
+}
+.tabs_btn_02::after{
+    background-position: -42px -26px;
+}
+.tabs_submit {
+    width: 330px;
+    height: 56px;
+    border-radius: 5px;
+    background-color: #333;
+    font-size: 17px;
+    color: #fff;
+}
