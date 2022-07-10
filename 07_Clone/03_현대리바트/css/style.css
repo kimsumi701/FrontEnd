@@ -1,0 +1,43 @@
+@charset 'utf-8';
+#wrap {
+    position: relative;
+    width: 100%;
+    min-width: 1220px;
+}
+.header-in {
+    display: flex;
+    width: 1200px;
+    margin: 10px auto auto auto;
+    /* margin: 0 auto; */
+    justify-content: space-between;
+}
+.logo {
+    margin-left: 250px;
+}
+.logo a {
+    display: block;
+    width: 150px;
+    height: 30px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999999px;
+}
+.header-right ul {
+    display: flex;
+    margin-bottom: 10px;
+    /* justify-content: space-between; */
+}
+.utill li {
+    margin-left: 10px;
+}
+.utill a {
+    font-size: 10px;
+    color: #aaa;
+}
+.gnb {
+    margin-right: 10px;
+}
+.gnb a {
+    font-size: 13px;
+}
