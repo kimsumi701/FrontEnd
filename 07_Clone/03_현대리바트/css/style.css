@@ -203,7 +203,6 @@
 #footer {
     width: 1200px;
     margin: 0 auto; 
-    ;   
 }
 .site {
     height: 45px;    
@@ -217,6 +216,9 @@
 .site ul li {
     margin: 10px;
 }
+.site ul a {
+    color: #aaa;
+}
 .script {
     display: flex;
     justify-content: center;
@@ -224,4 +226,15 @@
 }
 .script ul {
     display: flex;
+    margin-bottom: 10px;
+}
+.script ul li {
+    margin-right: 10px;
+    color: #aaa;
+}
+.script ul a {
+    color: #aaa;
+}
+.logo-footer {
+    margin-right: 40px;
 }
