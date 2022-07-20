@@ -144,11 +144,12 @@
             - 모듈 (Module)
                 1. 모듈이란 재사용하기 위한 코드의 조각을 뜻한다.
                 2. 세부사항은 캡슐화 시키고, API 부분만 외부에 노출시킨 코드이다.
+                        * 캡슐화 : 필요한 내용들을 한데 모아, 정리 정돈해놓은 상태 ?
                 3. type에 module를 추가시키고, 확장자를 mjs로 변경하여 사용한다.
                 4. 모듈은 모듈 스코프를 가지며, import와 export 키워드를 이용하여 사용한다.
                     <script type="module" src="lib.mjs"></script>
 
-            - 구조 분해 할당
+            - 구조 분해 할당 - 디스트럭팅(Destructuring)  
                 1. 구조 분해 할당이란 펼치다라는 뜻이다.
                 2. 객체나 배열에서 사용한다. 
                 3. 값을 해체한 후, 개별 값을 변수에 새로 할당하는 과정을 이야기한다.
@@ -176,13 +177,13 @@
                     let person = {이름: name, 나이: age}
                     바뀐 방법으로 만들면 다음과 같다.
                     let person = {name, age}
-                    
+                                      
                 5. 객체 분해 방법
                     let bts = {
                         name: '방탄',
                         num: 7
                     }
-                    // 기존에 우리가 사용하던 방법ㅂ
+                    // 기존에 우리가 사용하던 방법
                     let name = bts.name
                     let num = bts.num
                     // ES6 최신 문법
@@ -321,33 +322,80 @@
         // hyundai.summary();
 
         /* 연습! */
+        // 2
         // let name = "Jihun's fruit store";
         // let fruit = ['banana', 'apple', 'mango'];
         // let address = 'ulsan';
-
+        
         // let store = { name, fruit, address };
         // console.log(`제 가게 이름은 ${store.name}입니다. 위치는 ${store.address}입니다.`);
         // console.log(store);
 
-        // 함수 안을 바꿀것
+        //3. 함수 안을 바꿀것
         // function calculate(obj) {
         //     let {a,b,c} = obj;
         //     return a + b + c;
         // };
         // console.log(calculate({a:1, b:2, c:3}));
         
-        //true가 나오도록 할것
-        let name = 'JiHun store';
-        let fruits = ['banana', 'apple', 'mango'];
-        let address = {
-            country: 'korea',
-            city: 'Ulsan'
-        }
-        function findStore(obj) {
-            let {name, address:{city}} = obj;
-            return name == "JiHun store" && city == 'Ulsan'
-        }
-        console.log(findStore({name, fruits, address}));
-    </script>
+        //4. true가 나오도록 할것
+        // let name = 'JiHun store';
+        // let fruits = ['banana', 'apple', 'mango'];
+        // let address = {
+        //     country: 'korea',
+        //     city: 'Ulsan'
+        // }
+        // function findStore(obj) {
+        //     let {name, address:{city}} = obj;
+        //     return name == "JiHun store" && city == 'Ulsan'
+        // }
+        // console.log(findStore({name, fruits, address}));
+
+        // 5. 다음과 같게 프린트되게 하시오
+        // function getNumber() {
+        //     let array = [1,2,3,4,5,6];
+        //     let [first,,third, forth] = array;
+        //     return {first, third, forth};
+        // }
+        // console.log(getNumber());
+        // 결과값 {firtst:1, third:3, forth:4}
+
+        //6. 다음의 결과가 true가 되게 하시오
+        // function getCalender(first, ...rest) {
+        //     return (
+        //         first === 'January' &&
+        //         rest[0] === 'Febuary' &&
+        //         rest[1] === 'March' &&
+        //         rest[2] === undefined 
+        //     );
+        // }
+        // console.log(getCalender('January', 'Febuary', 'March'));        
+
+        //7. 두 어레이들중 최소값을 찾는 함수
+        // function getMinimum() {
+        //     let a = [45, 23, 78];
+        //     let b = [54, 11, 9];            
+        //     return Math.min(...a, ...b);
+        // };
+        // console.log(getMinimum());
+
+        //8. 다음의 함수를 화살표 함수로 바꾸시오
+        // function sumNumber() {
+        //     const sum = (a,b) => a+b;
+        //     return sum(40, 10);
+        // }       
+        // const sumNumber = (Val1, Val2) => {
+        //     const sum = (a, b) => a + b;
+        //     return sum(Val1, Val2);
+        // }
+        // console.log(sumNumber(40, 10));
+
+        //10. 다음 함수를 화살표 함수로 바꾸시오
+        function sumNumber() {                        
+            let addNumber = (a) => (b) => (c) => a + b + c;
+            return addNumber(1)(2)(3);                                   
+        };
+        console.log(sumNumber());
+    </script>    
 </body>
 </html>
