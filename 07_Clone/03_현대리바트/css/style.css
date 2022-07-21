@@ -38,14 +38,17 @@
     margin-left: 10px;
 }
 .utill a {
-    font-size: 10px;
+    font-size: 13px;
     color: #aaa;
+}
+.utill a:hover {
+    color: #aaaa;
 }
 .gnb li{ 
     margin-right: 40px;     
 }
 .gnb a {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 300;
 }
 .gnb-search a {
@@ -55,6 +58,9 @@
     background-repeat: no-repeat;  
     background-size: contain;    
     text-indent: -999999px;
+}
+.gnb a:hover {
+    color: darkseagreen
 }
 /* main */
 .slide {
@@ -237,4 +243,7 @@
 }
 .logo-footer {
     margin-right: 40px;
+}
+.script address {
+    color: #aaa;
 }
